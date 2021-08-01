@@ -5,23 +5,22 @@ cmake_minimum_required (VERSION 3.14)
 
 include_directories(${PROJECT_SOURCE_DIR}/3rd)
 add_executable (
-    ps0 
+    exercise1 
     "main.cpp"
-    "main.h"
 )
 
 enable_testing()
 
 add_executable(
-  hello_test
-  test.cc
- "main.h"
+    trans2d_test
+    "test_transformate2d.cc"
+    "transformate2d.h"
 )
 
 target_link_libraries(
-  hello_test
-  gtest_main
+    trans2d_test
+    gtest_main
 )
 
-include(googletest)
-gtest_discover_tests(hello_test)
+include(GoogleTest)
+gtest_discover_tests(trans2d_test)

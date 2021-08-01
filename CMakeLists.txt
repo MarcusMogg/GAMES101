@@ -3,6 +3,9 @@
 #
 cmake_minimum_required (VERSION 3.14)
 
+set(CMAKE_TOOLCHAIN_FILE ${CMAKE_CURRENT_SOURCE_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake
+  CACHE STRING "Vcpkg toolchain file")
+
 project ("GAMES101")
 
 set(CMAKE_CXX_STANDARD 17)
@@ -19,3 +22,5 @@ FetchContent_MakeAvailable(googletest)
 
 # 包含子项目。
 add_subdirectory ("ps0")
+add_subdirectory ("exercise1")
+add_subdirectory ("assignment1")
