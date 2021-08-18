@@ -308,8 +308,8 @@ int main(int argc, const char** argv)
     std::string obj_path = "models/spot/";
 
     // Load .obj File
-    // bool loadout = Loader.LoadFile("models/spot/spot_triangulated_good.obj");
-    bool loadout = Loader.LoadFile("models/dibo.obj");
+    bool loadout = Loader.LoadFile("models/spot/spot_triangulated_good.obj");
+    // bool loadout = Loader.LoadFile("models/dibo.obj");
     for (auto mesh : Loader.LoadedMeshes)
     {
         for (int i = 0; i < mesh.Vertices.size(); i += 3)
@@ -329,9 +329,9 @@ int main(int argc, const char** argv)
 
     auto texture_path = "hmap.jpg";
     r.set_texture(Texture(obj_path + texture_path));
-    texture_path = "spot_texture.png";
-    r.set_texture(Texture(obj_path + texture_path));
-    std::function<Eigen::Vector3f(fragment_shader_payload)> active_shader = texture_fragment_shader;
+    //texture_path = "spot_texture.png";
+    //r.set_texture(Texture(obj_path + texture_path));
+    std::function<Eigen::Vector3f(fragment_shader_payload)> active_shader = displacement_fragment_shader;
 
     if (argc >= 2)
     {
