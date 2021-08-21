@@ -37,9 +37,9 @@
 
 有两个维度，视场角（fov）和纵横比
 
-$ t = |n| * \tan(\theta/2)$
+$ t = |n| * \tan(\theta/2)$ 投影平面高度的一半
 
-$\frac{r}{t} = AspectRatio$
+$\frac{r}{t} = AspectRatio$ 宽/高
 
 带入正交投影公式，(r+l = 0,t+b = 0)可以得到
 $$
