@@ -16,7 +16,7 @@
 
 非常简单，按照课上讲的算一下即可
 
-![](https://www.notion.so/moggma/12-c3f41d5059ae44eeb623eda54180ec82#6e05493e0c924277b70174f47fde48f7)
+![image-20210822210857585](.assert/image-20210822210857585.png)
 
 注意代码里使用了dir inv,这样只用写乘法。但是他给的第三个参数没用啊……
 
@@ -55,10 +55,16 @@ if (node == nullptr || !node->bounds.IntersectP(ray, ray.direction_inv, dirIsNeg
 PBRT-E4.3-层次包围体(BVH)（一） - 玉米的文章 - 知乎
 https://zhuanlan.zhihu.com/p/50720158
 
-![Untitled](ps6%20608e4d2b87974b02a4a9b382f9d436cc/Untitled.png)
+![Untitled](Untitled.png)
 
 cost的计算，算左右bucket包围盒的交集的面积
 
 代码见`BVHAccel::recursiveBuildSAH`
 
 使用需要在 `Scene::buildBVH` 把参数改成 `BVHAccel::SplitMethod::SAH`
+
+
+
+效果图
+
+![image-20210822210917809](.assert/image-20210822210917809.png)
