@@ -17,3 +17,12 @@ vcpkg 使用指南见https://github.com/microsoft/vcpkg/blob/master/README_zh_CN
 1. vcpkg依赖vs的英文包，默认只装了中文包
 2. 网络问题，多重试几次
 3. 安装包时注意vs的生成类型要和vcpkg安装的一致，比如x64和x86
+
+## 作业进度
+
+[作业1](assignment1/README.md)
+[作业2](assignment2/README.md)
+[作业3](assignment3/README.md)
+[作业4](assignment4/README.md)
+[作业5](assignment5/README.md)
+[作业6](assignment6/README.md)
