@@ -93,7 +93,7 @@ Vector3f Scene::castRay(const Ray& ray, int depth) const
     if (fabs((local_inter.coords - xx).norm()) < 0.001)
     {
         L_dir = Li
-            * m->eval(wo, ws, n) // 菲涅尔系数
+            * m->eval(wo, ws, n) // BRDF
             * dotProduct(ws, n) // 入射光线和反射位置的夹角
             * dotProduct(-ws, nn) // 入射光线和光源采样位置的夹角
             / (dotProduct(xp, xp) * pdf);
@@ -110,7 +110,7 @@ Vector3f Scene::castRay(const Ray& ray, int depth) const
             pdf = m->pdf(wi, wo, n);
             if (pdf > 0.0001) {
                 L_indir = castRay(r, depth + 1)
-                    * m->eval(wi, wo, n) // 菲涅尔系数;
+                    * m->eval(wi, wo, n) // BRDF;
                     * dotProduct(wi, n)
                     / pdf / RussianRoulette;
             }

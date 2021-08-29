@@ -101,7 +101,8 @@ inline bool Bounds3::IntersectP(const Ray& ray, const Vector3f& invDir,
 
     const double t1 = std::max({ std::min(a.x,b.x),std::min(a.y,b.y),std::min(a.z,b.z) });
     const double t2 = std::min({ std::max(a.x,b.x),std::max(a.y,b.y),std::max(a.z,b.z) });
-    return  t1 <= t2&& t1 >= 0;
+    // NOTICE: t1是可以小于0的，考虑光源在长方体正上方
+    return  t1 <= t2&& t2 >= 0;
 }
 
 inline Bounds3 Union(const Bounds3& b1, const Bounds3& b2)
